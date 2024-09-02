@@ -1,0 +1,337 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mode-body {
+  background-color: #fff7de;
+}
+
+.navbar{
+    background-color: #ffd725;
+}
+
+main{
+  margin-bottom: 60px; 
+}
+
+span{
+  font-weight: 600;
+}
+p{
+  font-size: 20px;
+}
+
+#bee:hover {
+content: url('Bee-amgry.webp');
+padding-top: 66px;
+width: 190px;
+}
+
+/* modo claro y oscuro */
+.mode-body.dark {
+  background-color: #424242;
+}
+.dark-navbar{
+  background-color: #202020;
+}
+.dark-main, .dark-navbar a{
+  color: #fff;
+}
+.dark .navbar-toggler {
+  background-color: #7e7e7e; 
+  border: 1px solid #9e9e9e; 
+}
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 1.5em;
+}
+
+.switch input {
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
+
+.slid {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffee5a;
+  transition: .4s;
+}
+
+.off {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.5em;
+  background-color: white;
+  transition: .4s;
+  image-rendering: pixelated;
+  opacity: 1;
+}
+
+.on {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.5em;
+  background-color: white;
+  transition: .4s;
+  image-rendering: pixelated;
+  opacity: 0;
+}
+
+.switch input:checked + .slid {
+  background-color: #5e3815;
+}
+
+.switch input:focus + .slid {
+  box-shadow: 0 0 1px #fde405;
+}
+
+.switch input:checked ~ .off {
+  transform: translateX(2em);
+}
+
+.switch input:checked ~ .on {
+  transform: translateX(2em);
+  opacity: 1;
+}
+/* Fin modo claro y obscuro */
+
+/* CV */
+.download {
+  padding: 10px 40px;
+  font-size: 10px;
+  background-color: #333;
+  color: #fff;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  z-index: 1;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: unset;
+  padding: .8rem 1.5rem;
+  text-decoration: none;
+  font-weight: 900;
+  transition: all 0.7s cubic-bezier(0,.8,.26,.99);
+}
+
+.download:before {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  transition: .7s cubic-bezier(0,.8,.26,.99);
+  z-index: -1;
+  background-color: #333!important;
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset, -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+.download:after {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  transition: .7s cubic-bezier(0,.8,.26,.99);
+}
+
+.download:hover:before {
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset, -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+.download:hover:after {
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+}
+
+.download:active {
+  transform: translateY(4px);
+}
+
+.download:active:after {
+  box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
+/* Fin CV */
+
+/*redes sociales de contacto*/
+.redes {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.redes .social-link2, .redes .social-link3, .redes .social-link4 {
+  width: 10%; 
+  height: 60px ; 
+  position: relative;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50px;
+  background-color: #ffd725;
+}
+
+.redes svg {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  padding: 0.30rem;
+  cursor: pointer;
+}
+  
+  .redes svg {
+    transform: scale(1);
+  }
+
+  .redes .social-link2:hover {
+    background-color: #242c34;
+    animation: bounce_613 0.4s linear;
+  }
+  
+  .redes .social-link3:hover {
+    background-color: #5865f2;
+    animation: bounce_613 0.4s linear;
+  }
+  
+  .redes .social-link4:hover {
+    background-color: #0a66c2;
+    animation: bounce_613 0.4s linear;
+  }
+  
+  
+  @keyframes bounce_613 {
+    40% {
+      transform: scale(1.4);
+    }
+  
+    60% {
+      transform: scale(0.8);
+    }
+  
+    80% {
+      transform: scale(1.2);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+/* Fin redes sociales de contacto*/
+
+/*slider infinito*/
+.slider{
+  display: flex;
+  justify-content: center;
+  width: 35vw;
+  height: 70px;
+  overflow: hidden;
+  gap: 40px;
+}
+  
+.slider .slide-track{
+  display: flex;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  width: clac(70px * 16px);
+}
+.slider .slide{
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+}
+.slider .slide img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+    @keyframes scroll{
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100%{
+    -webkit-transform: translateX(calc(-200px * 4));
+    transform: translateX(calc(-200px * 4));
+  }
+}
+/*Fin slider infinito*/
+
+/*Inicio tarjetas*/
+.card-body{
+  background-color:rgb(255, 213, 121);
+}
+.card-text{
+  font-size: 15px;
+}
+/*Fin tarjetas*/
+
+/*Footer*/
+footer {
+  background: linear-gradient(rgba(250, 250, 250, 0.205), rgba(0, 0, 0, 0.781)), url(minecraft.jpg);
+  position: relative;
+  padding: 20px; 
+  color: white;
+}
+    .colorful-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffe986b9;
+      border-radius: 10px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #fff;
+      color: #333;
+      border-radius: 5px;
+    }
+    textarea.form-input {
+      height: 100px;
+    }
+    
+/*Fin Fotter*/
+
